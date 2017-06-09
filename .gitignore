@@ -1,0 +1,9 @@
+.gradle/
+.gradle/*
+build/
+build/*
+gradle/
+gradle/*
+bin/
+bin/*
+
