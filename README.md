@@ -1,6 +1,6 @@
 # README #
 
-This Projec is for java 8  trainig purposes.
+This Projec is for java 8  training purposes.
 
 ### Purpose? ###
 
