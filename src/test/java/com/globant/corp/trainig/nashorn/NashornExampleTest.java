@@ -24,7 +24,18 @@ public class NashornExampleTest {
     }
 
     @Test
-    public void nashornHelloWorldFromFile() {
+    public void nashornCallInterfaceJSImplTest() {
+        try {
+            NashornExample.nashornCallInterfaceJSImpl();
+            assertTrue(true);
+        } catch (final ScriptException | FileNotFoundException e) {
+            e.printStackTrace();
+            fail("Fail with " + e);
+        }
+    }
+
+    @Test
+    public void nashornHelloWorldFromFileTest() {
         try {
             NashornExample.nashornHelloWorldFromFile();
             assertTrue(true);
@@ -40,6 +51,34 @@ public class NashornExampleTest {
             NashornExample.nashornHelloWorld("java8");
             assertTrue(true);
         } catch (final ScriptException e) {
+            e.printStackTrace();
+            fail("Fail with " + e);
+        }
+    }
+
+    @Test
+    public void nashornJavaCodeFromJSFuinctionTest() {
+        try {
+            final String name = "java8";
+            NashornExample.nashornJavaCodeFromJSFuinction(name);
+            assertTrue(true);
+        } catch (final ScriptException e) {
+            e.printStackTrace();
+            fail("Fail with " + e);
+        }
+    }
+
+    @Test
+    public void nashornJSFuinctionFromJavaCodeTest() {
+        try {
+            final String name = "java8";
+            final int num1 = 1;
+            final int num2 = 2;
+            final String jsResults = NashornExample.nashornJSFuinctionFromJavaCode(name, num1, num2);
+            System.out.println(jsResults);
+            assertTrue(jsResults.contains(name));
+            assertTrue(jsResults.contains(String.valueOf(1 + 2)));
+        } catch (final ScriptException | NoSuchMethodException e) {
             e.printStackTrace();
             fail("Fail with " + e);
         }
