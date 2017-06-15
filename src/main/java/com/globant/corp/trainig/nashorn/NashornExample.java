@@ -55,6 +55,7 @@ public class NashornExample {
         jsSentence.append("Hello ");
         jsSentence.append(name);
         jsSentence.append("!');");
+        System.out.println(jsSentence.toString());
         ENGINE.eval(jsSentence.toString());
     }
 
@@ -66,6 +67,7 @@ public class NashornExample {
     public static void nashornJavaCodeFromJSFuinction(final String name) throws ScriptException {
         final String jsSenteces = "var NashornExample = Java.type('com.globant.corp.trainig.nashorn.NashornExample');var result = NashornExample.greet('"
                 + name + "');print(result);";
+        System.out.println(jsSenteces);
         ENGINE.eval(jsSenteces);
     }
 

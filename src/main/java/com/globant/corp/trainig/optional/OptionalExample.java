@@ -11,7 +11,8 @@ public class OptionalExample {
     public static final String EXCEPTION_MSG = "String value is null";
 
     public static List<String> optionalFilterListToList(final List<Optional<String>> strings, final String prefix) {
-        return strings.stream().filter( // filter the list with result of optional filter
+        
+       return strings.stream().filter( // filter the list with result of optional filter
                 optional -> {
                     // If a value is present, and the value matches the given predicate, return an Optional describing
                     // the

@@ -22,7 +22,7 @@ public class OptionalExampleTest {
     public void optionalFilterListToListTest() {
         final String prefix = "a";
         final List<Optional<String>> optionalList = new ArrayList<>();
-        optionalList.add(Optional.empty());// 1st element empty
+        optionalList.add(Optional.of(null));// 1st element empty
         optionalList.add(Optional.of(prefix + "1st element"));// 2nd element match with prefix
         optionalList.add(Optional.of("3rd element"));// 3rd element don't match with prefix
         optionalList.add(Optional.of(prefix + "4th element"));// 4th element match with prefix
